@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flipcheck</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/font-awesome.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="header-title">Flipcheck</div>
+        </header>
+        <section class="product">
+            <section class="product-wrapper t100">
+                <h3 class="product-title">The Product</h3>
+                <div class="product-block t33">
+                    <span class="icon fa fa-signal"></span>
+                    <span class="title">Increased Reviews</span>
+                    <span class="tagline">Capture a customers sentiment in the form of a review before they forget the moment and leave your establishment.</span>
+                </div>
+                <div class="product-block t33">
+                    <span class="icon fa fa-camera-retro"></span>
+                    <span class="title">Moment Snapshot</span>
+                    <span class="tagline">Recreate the moment the customer posted the in-store review by having waiter, meal and time of day data at your disposal.</span>
+                </div>
+                <div class="product-block t33">
+                    <span class="icon fa fa-bar-chart-o"></span>
+                    <span class="title">Satisfaction Analytics</span>
+                    <span class="tagline">Track trends in customer satisfaction as well as which products and waiters bring the highest ratings.</span>
+                </div>
+            </section>
+        </section>
+        <section class="about">
+            <section class="about-wrapper">
+                <h3 class="about-title">Our Team</h3>
+                <div class="about-block t33">
+                    <div class="image">
+                        <img src="" />
+                    </div>
+                    <div class="description">
+                        <span class="name">Grant Hensel</span>
+                        <span class="tagline">Running It</span>
+                    </div>
+                </div>
+                <div class="about-block t33">
+                    <div class="image">
+                        <img src="" />
+                    </div>
+                    <div class="description">
+                        <span class="name">Emory Griffith</span>
+                        <span class="tagline">Selling It</span>
+                    </div>
+                </div>
+                <div class="about-block t33">
+                    <div class="image">
+                        <img src="" />
+                    </div>
+                    <div class="description">
+                        <span class="name">Chris Anderson</span>
+                        <span class="tagline">Building It</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="map">
+            <section class="map-wrapper">
+                <h3 class="map-title">Homebase</h3>
+            </section>
+            <div id="map" class="map-canvas"></div>
+        </section>
+        <footer>
+            <section class="footer-wrapper">
+                <div class="footer-block t50">
+                    &copy; 2013 Flipcheck
+                </div>
+                <div class="footer-block t50 footer-block-with-love">
+                    Made with <span class="fa fa-heart"></span> in Wheaton, IL.
+                </div>
+            </section>
+        </footer>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAIRQ1eMxbUHusMKIuS4NgkwEXGGGYZKQo&sensor=true"></script>
+        <script type="text/javascript">
+            var map;
+        
+            var mapOptions = {
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false,
+                panControl: true,
+                scrollwheel: false,
+                panControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_CENTER
+                },
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.LARGE,
+                    position: google.maps.ControlPosition.LEFT_CENTER
+                }
+            };
+            
+            map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            map.setCenter(new google.maps.LatLng(41.869257,-88.099322));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,290 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+
+/**
+ * CONTENTS............You're reading it!
+ * RESET...............Set our reset defaults
+ * FONT-FACE...........Import brand font files
+ * STYLUS MIXIN........Set of functions to make cross-browser easier
+ * GRID
+ * ELEMENTS
+ * LAYOUT
+ * 
+ */
+ 
+ 
+//****************************************************************************** 
+ 
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, 
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, 
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, 
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, 
+nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+
+.t1     { width:1% }
+.t2     { width:2% }
+.t10    { width:10% }
+.t20    { width:20% }
+.t25    { width:25% }       /* 1/4 */
+.t30    { width:30% }
+.t32    { width:32% }
+.t33    { width:33.33333% }   /* 1/3 */
+.t40    { width:40% }
+.t50    { width:50% }       /* 1/2 */
+.t60    { width:60% }
+.t64    { width:64% }
+.t66    { width:66.66666% }   /* 2/3 */
+.t70    { width:70% }
+.t75    { width:75% }       /* 3/4*/
+.t80    { width:80% }
+.t90    { width:90% }
+.t100   { width:100% }
+
+
+
+
+/*------------------------------------*\
+    $ELEMENTS
+\*------------------------------------*/
+
+body {
+    background: #F6F6F6;
+    font: 18px/30px "Helvetica Neue", "Helvetica", sans-serif;
+    color: #333;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 200;
+    color: #000;
+    text-rendering: optimizeLegibility;
+}
+p {
+    margin: 0 0 28px 0;
+}
+strong {
+    font-weight: bold;
+}
+sup {
+    font-size: .7em;
+    vertical-align: top;
+    line-height: 1.15em;
+}
+input {
+    background: #F6F6F6;
+    padding: 7px 13px 6px;
+    margin: 0px 5px;
+    font-size: 17px;
+    border: 1px solid #F3F3F3;
+    border-radius: 4px;
+}
+label {
+    display: block;
+    margin: 5px 0px 0px 0px;
+}
+
+
+
+
+
+header {
+    background: #222 url("../images/header_bg.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 500px;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.header-title {
+    font: 62px/74px "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 100;
+    color: #FFF;
+    text-shadow: 1px 1px 2px #333;
+    width: 350px;
+    left: 50%;
+    top: 200px;
+    margin-left: -175px;
+    position: relative;
+    text-align: center;
+}
+
+
+.product,
+.about,
+.map,
+footer {
+    margin: 40px 0px;
+    padding: 20px 0px;
+    font-size: 0px;
+}
+
+.product-wrapper,
+.about-wrapper,
+.map-wrapper,
+.footer-wrapper {
+    width: 1024px;
+    margin: 0px auto;
+}
+
+.product-block,
+.about-block,
+.footer-block {
+    font: 18px/30px "Helvetica Neue", "Helvetica", sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    min-width: 250px;
+}
+
+.product-block .title,
+.about-block .name {
+    font-size: 24px;
+    display: block;
+    color: #111;
+    padding-bottom: 15px;
+}
+
+.product h3,
+.about h3,
+.map h3 {
+    font-size: 34px;
+    text-align: center;
+}
+
+.product-block .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.about {
+    background: #EEE;
+}
+.about-block .name {
+    padding-bottom: 0px;
+}
+
+.map {
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.map-canvas {
+    width: 100%;
+    height: 400px;
+}
+
+footer {
+    background: #222;
+    width: 100%;
+    color: #999;
+    margin: 0px;
+    padding: 10px;
+}
+
+.footer-block {
+    font-size: 14px;
+    text-align: left;
+}
+.footer-block-with-love {
+    text-align: right;
+}
+
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (max-width: 500px),
+only screen and (max-device-width: 500px) { 
+    body { width: 100%; }
+    
+    header { 
+        height: 150px;
+        background-size: 600px auto;
+        background-position: center center;
+    }
+    .header-title { 
+        font-size: 50px;
+        top: 35px; 
+        width: 320px;
+        margin-left: -160px;
+        text-align: center;
+    }
+    
+    .product-wrapper,
+    .about-wrapper,
+    .map-wrapper,
+    .footer-wrapper {
+        width: 320px;
+        margin: 0px auto;
+    }
+    
+    .product { margin-top: 0px; }
+    
+    .map-canvas { height: 200px; }
+    
+    footer { padding: 0px; }
+    
+    .product-block,
+    .about-block,
+    .footer-block {
+        width: 100% !important;
+        padding: 25px;
+    }
+}
+@media only screen and (max-device-width: 500px) { 
+    body { width: 320px; }
+}
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {}
